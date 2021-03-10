@@ -22,36 +22,3 @@ module.exports = burger;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-const orm = require('../config/orm');
-
-
-async function viewAll(){
-    const results = await orm.selectAll()
-}
-
-async function insert(){
-    const results = await orm.insertOne(name)
-
-}
-
-async function insert(){
-    const results = await orm.updateOne(name)
-
-}
-
-
-
-
-
-
