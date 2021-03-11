@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   
     // UPDATE
-    const changeDevouredBtns = document.querySelectorAll('.change-devoured');
+    const changeDevouredBtns = document.querySelectorAll('.changeDevoured');
   
     // Set up the event listener for the create button
     if (changeDevouredBtns) {
@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         button.addEventListener('click', (e) => {
           // Grabs the id of the element that goes by the name, "id"
           const id = e.target.getAttribute('data-id');
-          const newDevoured = e.target.getAttribute('data-newdevoured');
-  
+          const newDevoured = e.target.getAttribute('data-devoured');
+            console.log(`this is what is being passed`,id, newDevoured)
           const newDevouredState = {
-            devoured: newDevoured,
+            devoured: 1,
           };
   
           fetch(`/api/burgers/${id}`, {

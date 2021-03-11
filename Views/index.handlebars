@@ -13,6 +13,8 @@
             <li class="list-group-item">
 
                 {{id}} {{burger_name}}
+                <button type="button" class="changeDevoured" data-id="{{id}}" data-devoured="{{devoured}}" name="devoured"  value="1" class="btn btn-light">Devoured</button>
+             
             </li>
             {{/unless}}
             {{/each}}
@@ -53,12 +55,6 @@
                     <button type="submit" name="not-devoured" value="0">Add Burger</button>
                 </div>
                 
-                    {{!-- <div class="form-group">
-                        <label for="burger">Burger</label><br>
-                        <input type="radio" name="devoured" value="1" id="devoured" checked> Devoured!<br>
-                        <input type="radio"  id="not-devoured"> not-devoured
-                    </div>
-                 --}}
             </div>
 
         
