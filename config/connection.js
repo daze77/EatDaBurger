@@ -31,7 +31,7 @@ class Database {
 
 
 
-const connection = mysql.createConnection({
+const connection = new Database({
   host: 'localhost',
   port: 3306,
   user: 'root',
