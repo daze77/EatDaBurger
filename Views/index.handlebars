@@ -7,11 +7,15 @@
         <h2>ADD YOUR BURGER HERE!!!!!</h2>
         <form id="create-form" class="mt-2 mb-5">
 
-            <div class="form-group g-3">
-                <div class="col-auto">
+            <div class="row form-group g-3">
+                <div class="col">
                     <label for="ca">What type of burger would you like?</label>
-                    <input type="text" id="ca" name="name">
-                    <button type="submit" name="not-devoured" value="0">Add Burger</button>
+                </div>
+                <div class="col">
+                    <input class="form-control" type="text" id="ca" name="name">
+                </div>
+                <div class="col">
+                    <button class="btn btn-light btn-sm" type="submit" name="not-devoured" value="0">Add Burger</button>
                 </div>
             </div>
         </form>
