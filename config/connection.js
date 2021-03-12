@@ -32,7 +32,7 @@ class Database {
 
 
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: 'lyn7gfxo996yjjco.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
   port: 3306,
   user: 'sq6xs4lkvwvjfd1u',
   // NOTE: Be sure to add your MySQL password here!
