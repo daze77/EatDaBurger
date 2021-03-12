@@ -31,13 +31,13 @@ class Database {
 
 
 
-const connection = new Database({
+const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
-  user: 'root',
+  user: 'sq6xs4lkvwvjfd1u',
   // NOTE: Be sure to add your MySQL password here!
-  password: 'Summer77',
-  database: 'burgers_db',
+  password: 'kqo6swq8l1q4b0ce',
+  database: 'nbzgr48so0c0z9jj',
 });
 
 // // Make connection.
