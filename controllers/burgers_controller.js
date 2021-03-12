@@ -16,6 +16,12 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get("/", function(req, res){
+  res.redirect("/burgers");
+});
+
+
+
 router.post('/api/burgers', (req, res) => {
     burger.create(['burger_name', 'devoured'], [req.body.name, req.body.devoured], (result) => {
     // Send back the ID of the new quote
