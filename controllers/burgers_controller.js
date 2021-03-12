@@ -20,7 +20,12 @@ router.get("/", function(req, res){
   res.redirect("/burgers");
 });
 
+router.get("/burgers", function(req, res){
+  burger.all(function(burgerData){
+    res.render("index", {burger_data: burgerData});
+  });
 
+});
 
 router.post('/api/burgers', (req, res) => {
     burger.create(['burger_name', 'devoured'], [req.body.name, req.body.devoured], (result) => {
