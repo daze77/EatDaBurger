@@ -49,7 +49,7 @@
             {{#each burgers}}
             {{#if devoured}}
             <li class="list-group-item">
-                {{id}} {{burger_name}}
+                {{id}} {{burger_name}}<span class=" float-end" ><i class="delete-burger fas fa-minus" data-id="{{id}}"></i></span>
             </li>
             {{/if}}
             {{/each}}

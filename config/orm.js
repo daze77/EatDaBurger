@@ -1,5 +1,5 @@
 // Import MySQL connection.
-const connection = require('./connection.js')
+const connection = require('./connection.js')('burgers_db', 'November77')
 
 // Helper function for SQL syntax.
 // Let's say we want to pass 3 values into the mySQL query.
@@ -88,6 +88,25 @@ const orm = {
       cb(result);
     });
   },
+
+
+  delete(table, condition, cb){
+    let queryString = `DELETE from ${table}`;
+    queryString += ' WHERE ';
+    queryString += condition;
+
+
+    console.log(queryString);
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+
+  }
+
 };
 
 // Export the orm object for the model (cat.js).

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
     if (createDevouredBtn) {
         createDevouredBtn.addEventListener('submit', (e) => {
-        e.preventDefault();
+        // e.preventDefault();
   
         // Grabs the value of the textarea that goes by the name, "quote"
         const newBurger = {
@@ -85,10 +85,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     deleteBurgerBtns.forEach((button) => {
       button.addEventListener('click', (e) => {
         const id = e.target.getAttribute('data-id');
+        console.log('we pushed the button for id', id)
   
         // Send the delete request
         fetch(`/api/burgers/${id}`, {
           method: 'DELETE',
+          body: JSON.stringify(id),
+
+
         }).then((res) => {
           console.log(res);
           console.log(`Deleted burger: ${id}`);
