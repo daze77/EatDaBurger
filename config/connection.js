@@ -41,11 +41,6 @@ function dbConnect( dbName, dbPassword ){
         password: dbPassword,
         database: dbName
     })
-
-
-    // const connection=mysql.createConnection(process.env.JAWSDB_URL)
-
-
     return db
 }
 
@@ -55,6 +50,7 @@ function dbConnect( dbName, dbPassword ){
 
 
 
+// const connection=mysql.createConnection(process.env.JAWSDB_URL)
 
 
 
